@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Score Predictor</title>
+</head>
+<body>
+    <h2>Enter Student Info</h2>
+    <form action="/predict" method="post">
+        <label>Study Hours: <input type="text" name="study_hours" /></label><br>
+        <label>Sleep Hours: <input type="text" name="sleep_hours" /></label><br>
+        <label>Previous Score: <input type="text" name="previous_score" /></label><br>
+        <input type="submit" value="Predict Score" />
+    </form>
+
+    {% if result is not none %}
+        <h3>Predicted Score: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
+
