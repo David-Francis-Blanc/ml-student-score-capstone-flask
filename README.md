@@ -1,1 +1,1 @@
-# student-score-ml-flask
+Flask app that predicts student scores using an ML model
