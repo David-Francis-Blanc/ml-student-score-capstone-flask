@@ -1,38 +1,57 @@
 # Student Score Predictor (Flask + ML)
 
 This is a simple Flask web app that predicts a student’s future score based on:
-- Study hours  
-- Sleep hours  
-- Previous score  
 
-The app uses a trained boosting model saved via `pickle`.
+- 📚 Study hours
+- 💤 Sleep hours
+- 📊 Previous score
 
----
-
-## 🧠 Model
-
-The ML model was trained using boosting techniques (e.g., Gradient Boosting, XGBoost) on a dataset with student performance metrics. The final trained model is stored as `model/boosting_model.pkl`.
+The app uses a trained ML model (Gradient Boosting) to make predictions and displays the result via a styled Bootstrap interface.
 
 ---
 
-## ⚙️ How It Works
+## 🔧 Tech Stack
 
-1. User enters input values in the form (study hours, sleep hours, previous score).
-2. Flask receives the form data and passes it to the ML model.
-3. Model returns a prediction.
-4. The result is displayed on the page.
+- Python
+- Pandas
+- Scikit-learn
+- Flask
+- Bootstrap (CDN)
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repo  
+   `git clone https://github.com/YOUR_USERNAME/ml-student-score-capstone-flask.git`
+
+2. Navigate into the project folder  
+   `cd ml-student-score-capstone-flask`
+
+3. Install required packages  
+   `pip install -r requirements.txt`
+
+4. Launch the Flask server  
+   `python app.py`
+
+5. Visit `http://127.0.0.1:5000` in your browser.
+
+---
+
+## 💡 Sample Inputs
+
+| Study Hours | Sleep Hours | Previous Score | Output     |
+|-------------|-------------|----------------|------------|
+| 4           | 7           | 80             | 87.67      |
 
 ---
 
 ## 📷 Screenshot
 
-![screenshot](screenshot.png)
+![App Screenshot](screenshot.png)
 
 ---
 
-## 🚀 Tech Stack
+## 📄 License
 
-- Python
-- Flask
-- scikit-learn / XGBoost
-- HTML (Jinja2 templating)
+MIT
