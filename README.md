@@ -1,57 +1,79 @@
-# Student Score Predictor (Flask + ML)
+# 🧠 Student Score Predictor (Capstone Project)
 
-This is a simple Flask web app that predicts a student’s future score based on:
+A simple Flask web app that predicts a student's future score based on:
 
-- 📚 Study hours
-- 💤 Sleep hours
-- 📊 Previous score
+- 📘 Study hours  
+- 😴 Sleep hours  
+- 🧠 Previous score  
 
-The app uses a trained ML model (Gradient Boosting) to make predictions and displays the result via a styled Bootstrap interface.
-
----
-
-## 🔧 Tech Stack
-
-- Python
-- Pandas
-- Scikit-learn
-- Flask
-- Bootstrap (CDN)
+The prediction is powered by a trained **Gradient Boosting** model (`boosting_model.pkl`).
 
 ---
 
 ## 🚀 How to Run Locally
 
-1. Clone the repo  
-   `git clone https://github.com/YOUR_USERNAME/ml-student-score-capstone-flask.git`
-
-2. Navigate into the project folder  
-   `cd ml-student-score-capstone-flask`
-
-3. Install required packages  
-   `pip install -r requirements.txt`
-
-4. Launch the Flask server  
-   `python app.py`
-
-5. Visit `http://127.0.0.1:5000` in your browser.
+1. Clone the repository  
+2. Install requirements:  
+   `pip install -r requirements.txt`  
+3. Run the app:  
+   `python app.py`  
+4. Open browser at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
 ## 💡 Sample Inputs
 
-| Study Hours | Sleep Hours | Previous Score | Output     |
-|-------------|-------------|----------------|------------|
-| 4           | 7           | 80             | 87.67      |
+| Study Hours | Sleep Hours | Previous Score | Output  |
+|-------------|-------------|----------------|---------|
+| 60          | 6           | 80             | 87.67   |
 
 ---
 
-## 📷 Screenshot
+## 🖥️ How It Works
 
-![App Screenshot](screenshot.png)
+1. User enters values in the form  
+2. Data is sent to the ML model  
+3. Model returns a prediction  
+4. Result is displayed with basic styling
 
 ---
 
-## 📄 License
+## 🧪 Input Validation & Error Handling
 
-MIT
+- Ensures only numeric input is accepted  
+- Graceful error messages if input is missing/invalid
+
+---
+
+## 🖼️ Screenshots
+
+### Before Styling  
+![Before Screenshot](screenshot_before.png)
+
+### After Styling  
+![After Screenshot](screenshot.png)
+
+---
+
+## 📁 Project Structure
+
+```
+student_score_app/
+├── model/
+│   └── boosting_model.pkl
+├── templates/
+│   └── index.html
+├── static/ (optional for CSS)
+├── app.py
+├── README.md
+├── LICENSE
+├── requirements.txt
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.  
+Feel free to use, modify, and share with attribution.
+
